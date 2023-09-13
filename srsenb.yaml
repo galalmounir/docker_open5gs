@@ -1,7 +1,7 @@
 version: '3'
 services:
   srsenb:
-    image: docker_srslte
+    image: galalhassan/docker_srslte
     container_name: srsenb
     stdin_open: true
     tty: true
