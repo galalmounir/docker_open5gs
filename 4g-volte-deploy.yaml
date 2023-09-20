@@ -217,7 +217,6 @@ services:
       default:
         ipv4_address: ${PCRF_IP}
   dns:
-    build: ./dns
     image: galalhassan/docker_dns
     container_name: dns
     env_file:
@@ -232,7 +231,6 @@ services:
       default:
         ipv4_address: ${DNS_IP}
   rtpengine:
-    build: ./rtpengine
     image: galalhassan/docker_rtpengine
     container_name: rtpengine
     privileged: true
@@ -260,7 +258,6 @@ services:
       default:
         ipv4_address: ${RTPENGINE_IP}
   mysql:
-    build: ./mysql
     image: galalhassan/docker_mysql
     container_name: mysql
     env_file:
@@ -275,7 +272,6 @@ services:
       default:
         ipv4_address: ${MYSQL_IP}
   pyhss:
-    build: ./pyhss
     image: galalhassan/docker_pyhss
     container_name: pyhss
     dns: ${DNS_IP}
@@ -402,7 +398,6 @@ services:
       default:
         ipv4_address: ${SMSC_IP}
   osmomsc:
-    build: ./osmomsc
     image: galalhassan/docker_osmomsc
     container_name: osmomsc
     volumes:
@@ -422,7 +417,6 @@ services:
       default:
         ipv4_address: ${OSMOMSC_IP}
   osmohlr:
-    build: ./osmohlr
     image: galalhassan/docker_osmohlr
     container_name: osmohlr
     volumes:
@@ -439,7 +433,6 @@ services:
       default:
         ipv4_address: ${OSMOHLR_IP}
   metrics:
-    build: ./metrics
     image: galalhassan/docker_metrics
     container_name: metrics
     env_file:
