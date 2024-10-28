@@ -68,6 +68,7 @@ fi
 sed -i 's|MNC|'$MNC'|g' /etc/srsran/enb.conf
 sed -i 's|MCC|'$MCC'|g' /etc/srsran/enb.conf
 sed -i 's|SRS_ENB_IP|'$SRS_ENB_IP'|g' /etc/srsran/enb.conf
+sed -i 's|SRS_ENB_HOST|'$SRS_ENB_IP'|g' /etc/srsran/enb.conf
 sed -i 's|SRS_UE_IP|'$SRS_UE_IP'|g' /etc/srsran/enb.conf
 sed -i 's|UE1_KI|'$UE1_KI'|g' /etc/srsran/ue.conf
 sed -i 's|UE1_OP|'$UE1_OP'|g' /etc/srsran/ue.conf

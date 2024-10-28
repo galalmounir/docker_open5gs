@@ -1,37 +1,39 @@
 #!/bin/bash
 
+docker buildx create --use
+
 cd base
-docker build -t galalhassan/docker_open5gs .
+docker buildx build -t galalhassan/docker_open5gs --platform linux/amd64,linux/arm64 --push .
 
 cd ../ims_base
-docker build -t galalhassan/docker_kamailio .
+docker buildx build -t galalhassan/docker_kamailio --platform linux/amd64,linux/arm64 --push .
 
 cd ../srslte
-docker build -t galalhassan/docker_srslte .
+docker buildx build -t galalhassan/docker_srslte --platform linux/amd64,linux/arm64 --push .
 
 cd ../srsran
-docker build -t galalhassan/docker_srsran .
+docker buildx build -t galalhassan/docker_srsran --platform linux/amd64,linux/arm64 --push .
 
 cd ../ueransim
-docker build -t galalhassan/docker_ueransim .
+docker buildx build -t galalhassan/docker_ueransim --platform linux/amd64,linux/arm64 --push .
 
 cd ../dns
-docker build -t galalhassan/docker_dns .
+docker buildx build -t galalhassan/docker_dns --platform linux/amd64,linux/arm64 --push .
 
 cd ../rtpengine
-docker build -t galalhassan/docker_rtpengine .
+docker buildx build -t galalhassan/docker_rtpengine --platform linux/amd64,linux/arm64 --push .
 
 cd ../mysql
-docker build -t galalhassan/docker_mysql .
+docker buildx build -t galalhassan/docker_mysql --platform linux/amd64,linux/arm64 --push .
 
 cd ../pyhss
-docker build -t galalhassan/docker_pyhss .
+docker buildx build -t galalhassan/docker_pyhss --platform linux/amd64,linux/arm64 --push .
 
 cd ../osmomsc
-docker build -t galalhassan/docker_osmomsc .
+docker buildx build -t galalhassan/docker_osmomsc --platform linux/amd64,linux/arm64 --push .
 
 cd ../osmohlr
-docker build -t galalhassan/docker_osmohlr .
+docker buildx build -t galalhassan/docker_osmohlr --platform linux/amd64,linux/arm64 --push .
 
 cd ../metrics
-docker build -t galalhassan/docker_metrics .
+docker buildx build -t galalhassan/docker_metrics --platform linux/amd64,linux/arm64 --push .
